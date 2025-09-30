@@ -22,7 +22,6 @@ const ProjectCard = ({ index, title, route }: ProjectCardProps) => {
                     #{index + 1}
                 </p>
 
-                {/* Card Content */}
                 <div className="relative z-10 flex h-full flex-col justify-between">
                     <div className="flex justify-end">
                         <ArrowUpRight className="h-6 w-6 text-gray-300 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
