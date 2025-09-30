@@ -6,7 +6,7 @@ const INPUT_DIGITS = 6;
 
 const OtpInput = () => {
     const [otp, setOtp] = useState<string[]>(new Array(INPUT_DIGITS).fill(""));
-    const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+    const inputRefs = useRef<Array<HTMLInputElement | null>>(Array(INPUT_DIGITS).fill(null));
 
     useEffect(() => {
         inputRefs.current[0]?.focus();
@@ -68,7 +68,9 @@ const OtpInput = () => {
                 {otp.map((value, index) => (
                     <input
                         key={index}
-                        ref={(el) => (inputRefs.current[index] = el)}
+                        ref={(el) => {
+                            inputRefs.current[index] = el;
+                        }}
                         type="text"
                         inputMode="text"
                         maxLength={1}
