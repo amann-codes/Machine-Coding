@@ -18,7 +18,7 @@ const ProjectCard = ({ index, title, route }: ProjectCardProps) => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
             >
-                <p className="absolute -right-4 -bottom-4 text-8xl font-black text-gray-300 z-0">
+                <p className="absolute -right-4 -bottom-4 text-8xl font-black text-gray-300 z-0 transition-colors duration-300 group-hover:text-green-600">
                     #{index + 1}
                 </p>
 
